@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImg from '../assets/profile.jpg';
 
 export const Hero = ({ identity }) => {
   const handleScrollToExplore = (e) => {
@@ -23,13 +24,9 @@ export const Hero = ({ identity }) => {
         <div className="hero-profile-hero">
           <div className="hero-portrait-frame">
             <img
-              src={identity.photo}
+              src={profileImg}
               alt={identity.name}
               className="hero-portrait-img"
-              onError={(e) => {
-                // Graceful fallback to initial badge if image fails
-                e.target.style.display = 'none';
-              }}
             />
             <div className="hero-portrait-tag">
               <span className="dot-pulse" aria-hidden="true"></span>
